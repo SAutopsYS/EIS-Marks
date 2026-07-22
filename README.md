@@ -15,8 +15,8 @@ Platform Engineer screening project for **Euro International School (Sikar)**. F
 
 School ERP exports are messy. This app takes:
 
-- `data/students_marks.csv` — duplicates, inconsistent names, mixed date formats, blank absents  
-- `data/corrections.json` — mark corrections (including intentional invalid rows)
+- `data/students_marks.csv` - duplicates, inconsistent names, mixed date formats, blank absents  
+- `data/corrections.json` - mark corrections (including intentional invalid rows)
 
 Then it:
 
@@ -161,12 +161,12 @@ Unique constraint: `(student, subject)`.
 
 ## 8. Data Cleaning Rules
 
-1. **Duplicates** — same `(admission_no, subject)` → keep the higher mark  
-2. **Names** — trim, collapse spaces, Title Case  
-3. **Absents** — blank marks → `NULL`; excluded from totals/averages  
-4. **Dates** — normalize to `YYYY-MM-DD`  
-5. **Subjects** — must be one of the five allowed values  
-6. **Import** — transactional wipe + reload (safe to re-run)
+1. **Duplicates** - same `(admission_no, subject)` → keep the higher mark  
+2. **Names** - trim, collapse spaces, Title Case  
+3. **Absents** - blank marks → `NULL`; excluded from totals/averages  
+4. **Dates** - normalize to `YYYY-MM-DD`  
+5. **Subjects** - must be one of the five allowed values  
+6. **Import** - transactional wipe + reload (safe to re-run)
 
 ---
 
